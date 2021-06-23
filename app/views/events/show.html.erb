@@ -1,4 +1,4 @@
-<h1>Event Index</h1>
+<h1>My Events <%= current_user.username %></h1>
 <% @events.each do |event| %>
   <h2><%= event.name %></h2>
   <%= event.date %>

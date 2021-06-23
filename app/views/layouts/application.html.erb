@@ -11,6 +11,40 @@
   </head>
 
   <body class="container">
+  <nav class="navbar navbar-light navbar-expand-lg bg-dark rounded-bottom">
+    <div class="container-fluid">
+      <%= link_to "Private Events", root_path, class: 'navbar-brand fs-2 text-danger' %>
+      <% if user_signed_in? %>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to "Create Event", new_event_url, class: "nav-link fs-5 text-light" %>
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to "My Events", events_path, class: "nav-link fs-5 text-light" %>
+        </ul>
+      <% end %>
+      <div class="d-flex flex-column justify-content-between">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <% if !user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to "Sign In", new_user_session_path, class: "nav-link fs-5 text-light"%>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Sign Up", new_user_registration_url, class: "nav-link fs-5 text-light"%>
+              </li>
+              </ul>
+            <% else %>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <%= link_to "Log out", destroy_user_session_path, :method=>'delete', class: "nav-link fs-5 text-light" %>
+              </ul>
+            <% end %>
+            </div>
+      </div>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
