@@ -3,4 +3,5 @@
   <h2><%= event.name %></h2>
   <%= event.date %>
   <strong><%= event.description %></strong>
+  <%= link_to "Read mode", event_path(event), class: "btn btn-danger" %>
 <% end %>
