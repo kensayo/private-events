@@ -18,10 +18,10 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <%= link_to "Create Event", new_event_url, class: "nav-link fs-5 text-light" %>
-        </ul>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </li>
           <li class="nav-item">
-            <%= link_to "My Events", "#{root_url}users/#{current_user.id}", class: "nav-link fs-5 text-light" %>
+            <%= link_to "#{current_user.username.capitalize}'s Events", "#{root_url}users/#{current_user.id}", class: "nav-link fs-5 text-light" %>
+          </li>
         </ul>
       <% end %>
       <div class="d-flex flex-column justify-content-between">

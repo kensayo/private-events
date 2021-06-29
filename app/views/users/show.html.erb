@@ -4,3 +4,13 @@
   <%= event.date %>
   <strong><%= event.description %></strong>
 <% end %>
+<h1>My upcoming events</h1>
+<% @upcoming_events.each do |event| %>
+  <%= event['name'] %>
+  <%= event['date'] %>
+<% end %>
+<h1>My past events</h1>
+<%@past_events.each do |event| %>
+  <%= event['name'] %>
+  <%= event['date'] %>
+<% end %>
