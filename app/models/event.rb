@@ -5,6 +5,8 @@ class Event < ApplicationRecord
   scope :upcoming, -> { where('date > ?', Date.today).order('date ASC') }
   scope :past, -> { where('date < ?', Date.today).order('date DESC') }
 
+  validates :name, :date, :description, presence: true
+
   def self.attend_past(my_id)
     @connection = ActiveRecord::Base.connection
     @connection.exec_query("SELECT events.id, events.name, events.description, events.date

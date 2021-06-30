@@ -34,18 +34,16 @@
           <i class="fas fa-angle-double-right text-danger me-2"></i>
           <%= link_to event['name'], event_path(event['id']), class: 'stretched-link text-reset text-decoration-none' %>
         </p>
-        <!-- <p class="fw-bold fs-4"><i class="fas fa-angle-double-right text-danger me-2"></i><%= event['name'] %></p>-->
         <p class="fs-4 my-1"><%= event['date']%></p>
       </div>
     <% end %>
     <h2 class="badge bg-danger text-light w-100 fs-3 mt-3">My past events</h2>
     <%@past_events.each do |event| %>
-      <div class="d-flex justify-content-between position-relative hover px-1">
+      <div class="d-flex justify-content-between position-relative hover px-1 rounded">
         <p class="fw-bold fs-4 my-1">
           <i class="fas fa-angle-double-right text-danger me-2"></i>
           <%= link_to event['name'], event_path(event['id']), class: 'stretched-link text-reset text-decoration-none' %>
         </p>
-        <!-- <p class="fw-bold fs-4"><i class="fas fa-angle-double-right text-danger me-2"></i><%= event['name'] %></p>-->
         <p class="fs-4 my-1"><%= event['date']%></p>
       </div>
     <% end %>

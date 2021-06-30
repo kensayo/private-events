@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     id = current_user.id
-    @event = Event.where (user_id = '2')
+    @event = Event.where(user_id = '2')
     p @event.name
   end
 
@@ -10,6 +10,4 @@ class UsersController < ApplicationController
     @upcoming_events = Event.attend_upcoming(current_user.id)
     @event = Event.where(user_id: current_user.id)
   end
-
 end
-

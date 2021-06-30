@@ -21,14 +21,14 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @attend = @event.attendances.where(user_id:current_user.id).blank?
-    @will = @event.attendances.where(user_id:current_user.id)
+    @attend = @event.attendances.where(user_id: current_user.id).blank?
+    @will = @event.attendances.where(user_id: current_user.id)
     @total = @event.attendances.count
   end
 
   private
+
   def event_params
     params.require(:event).permit(:date, :description, :name)
   end
-
 end
