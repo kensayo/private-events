@@ -16,6 +16,7 @@ gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'bootstrap', '~> 5.0.1'
 gem 'webpacker', '~> 5.0'
+gem 'rspec-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -48,6 +49,7 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', require: false
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end

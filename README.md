@@ -66,6 +66,10 @@ To get a local copy up and running follow these simple example steps.
 
 - You can go to http://127.0.0.1:3000/ to use the app locally
 
+### Tests
+
+```rails db:migrate RAILS_ENV=test```
+
 ## 👨🏻‍💻 Kenny Ortega
 
 - GitHub: [kensayo](https://github.com/kensayo)
