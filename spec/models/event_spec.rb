@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe Event, type: :model do
   before(:all) do
     params = { name: 'test event', date: Date.today, description: 'test description of the event' }
-    @event = Event.new(params)
     @no_name = Event.new(params.merge(name: nil)).save
     @no_description = Event.new(params.merge(description: nil)).save
     @no_date = Event.new(params.merge(date: nil)).save
