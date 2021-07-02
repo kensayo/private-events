@@ -68,7 +68,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Tests
 
-```rails db:migrate RAILS_ENV=test```
+- You need to migrate the test database with the following command ```rails db:migrate RAILS_ENV=test```
+- Then just run ```rspec``` in the prompt
 
 ## 👨🏻‍💻 Kenny Ortega
 

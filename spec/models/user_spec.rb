@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
   end
 
   context 'Associations' do
-    it "should have many attendances" do
+    it 'should have many attendances' do
       t = Event.reflect_on_association(:attendances)
       expect(t.macro).to eq(:has_many)
     end
