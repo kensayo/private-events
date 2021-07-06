@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'Events', type: :feature do
   before(:each) do
     visit new_user_registration_url
@@ -44,3 +44,4 @@ RSpec.feature 'Events', type: :feature do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
