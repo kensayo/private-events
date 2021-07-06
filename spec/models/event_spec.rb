@@ -1,5 +1,4 @@
 require 'rails_helper'
-# rubocop:disable Metrics/BlockLength
 RSpec.describe Event, type: :model do
   before(:all) do
     params = { name: 'test event', date: Date.today, description: 'test description of the event' }
@@ -33,4 +32,3 @@ RSpec.describe Event, type: :model do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength
