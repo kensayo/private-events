@@ -44,13 +44,14 @@
     - RubyMine
     - CSS3
 
-## Getting Started
+## 🚩 Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### ✅ Prerequisites
 
 * Make sure that **Ruby Environment** is installed in your computer (try to run _ruby_ from your prompt), if not you can install it from [here.](https://www.ruby-lang.org/en/downloads/)
+
 
 * [Download](https://github.com/kensayo/private-events/archive/refs/heads/development.zip) and unzip **or** [clone this repository](https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
@@ -66,7 +67,7 @@ To get a local copy up and running follow these simple example steps.
 
 - You can go to http://127.0.0.1:3000/ to use the app locally
 
-### Tests
+### 🛠️ Tests
 
 - You need to migrate the test database with the following command ```rails db:migrate RAILS_ENV=test```
 - Then just run ```rspec``` in the prompt
