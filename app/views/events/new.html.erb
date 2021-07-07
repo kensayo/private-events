@@ -1,0 +1,30 @@
+<h2 class="badge bg-danger text-light w-100 fs-3 mt-3">Create Event</h2>
+<%= form_for :event, url: events_path do |f| %>
+  <% if @event.errors.any? %>
+    <% @event.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <div class="row">
+    <div class="col-6">
+      <p>
+        <h5 class="card-title"><%= f.label :name %></h5>
+        <%= f.text_field :name, class: 'form-control' %>
+      </p>
+
+      <p>
+        <h5 class="card-title"><%= f.label :date %></h5>
+        <%= f.date_field :date, class: 'form-control' %>
+      </p>
+    </div>
+    <div class="col-6">
+      <p>
+        <h5 class="card-title"><%= f.label :description %></h5>
+        <%= f.text_area :description, class: 'form-control text-area' %>
+      </p>
+    </div>
+  </div>
+  <p class="d-flex justify-content-center">
+    <%= f.submit "Save Event", class: 'btn btn-success fw-bold mx-auto w-50' %>
+  </p>
+<% end %>

@@ -1,0 +1,35 @@
+<h2 class="badge bg-danger text-light w-100 fs-3 mt-3"><%= @event.name %></h2>
+<div class="row ">
+  <div class="col-6 my-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Description</h2>
+      <% if @attend %>
+        <%= link_to event_attendances_path(@event), id: 'attend', method: :post, class: 'btn btn-success px-2 py-1' do %>
+          <i class="fas fa-check-circle"></i>
+        <% end %>
+      <% else %>
+        <%= link_to event_attendances_path(@event) + "/" + @event.attendances.where(user_id:current_user).first.id.to_s, id: 'notattend', method: 'delete', action: 'delete', class: 'btn btn-danger px-2 py-1' do %>
+          <i class="fas fa-times-circle"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <p><%= @event.description %></p>
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>When?</h2>
+      <h3 class="text-danger fw-bold"> <%= @event.date.strftime("%A, %d %B %Y") %></h3>
+    </div>
+  </div>
+  <div class="col-6 my-4">
+    <h2 class="badge bg-success text-light w-100 fs-4">Attenders (<%= @total %>)</h2>
+    <% @event.attendances.each do |attenders| %>
+      <div class="d-flex justify-content-between position-relative hover px-1 rounded">
+        <p class="fw-bold fs-4 my-1">
+          <i class="fas fa-angle-double-right text-success me-2"></i>
+          <%= attenders.user.username.capitalize %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
